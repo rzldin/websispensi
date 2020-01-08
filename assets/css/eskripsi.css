@@ -1,0 +1,44 @@
+
+
+.navbar {
+	background-color: light;
+	top: fixed;
+}
+
+
+
+.sispensi-head {
+	text-align: center;
+	background-color: rgb(0, 132, 180);
+	padding: 20px;
+	color: #fff;
+	margin-top: 50px;
+	
+}
+
+
+.sispensi-footer {
+
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	background-color: rgb(0, 132, 180);
+  	color: #fff;
+  	margin-top: 50px;
+
+}
+
+.sispensi-footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sispensi-footer h5 {
+	font-family: "Duru Sans", Verdana, sans-serif;
+	font-weight: lighter;
+}
+
+.sispensi-footer p {
+	
+	text-transform: uppercase;
+}

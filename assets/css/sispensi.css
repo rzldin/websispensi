@@ -1,0 +1,145 @@
+.btn a{
+    text-decoration: none;
+}
+
+.jumbotron {
+    border-radius: 0;
+    padding: 3rem 0 2rem;
+}
+
+h2.heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1.9rem;
+}
+
+
+h5.heading {
+    font-size: 1.5rem;
+    font-weight: 550;
+    text-transform: uppercase;
+
+}
+
+.loginakun img{
+    max-width: 100%;
+    transition: transform .5s ease;
+}
+
+.row.no-padding [class=col-] {
+    padding: 0;
+}
+
+.loginakun img:hover {
+    transform: scale(1.1);
+    cursor: zoom-in;
+}
+
+.heading-underline {
+    width: 3rem;
+    height: .2rem;
+    background-color: blue;
+    margin: 0 auto 2rem;
+}
+
+.container .display-4 {
+	text-align: center;
+}
+
+.carousel-caption {
+	border: solid;
+
+}
+
+.narrow{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.bottom-line{
+	width: 2%;
+	align: center;
+	border: solid;
+}
+
+.col-centered {
+	display: inline-block;
+	float: none;
+	text-align: left;
+	margin-right: -4px;
+}
+.carousel-caption h1 {
+	font-size: 30px;
+    position: relative;
+}
+
+.carousel-caption p {
+	font-size: 18px;
+    position: relative;
+}
+
+.header-section h2{
+	text-align: center;
+}
+
+.col-4{
+	padding: 10px 0; 
+	border:1px solid black;
+}
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+   
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: black;
+}
+
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.login-form-3{
+    padding: 5%;
+   
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-3 h3{
+    text-align: center;
+    color: black;
+}
+
+.row a {
+	text-decoration: none;
+    
+}

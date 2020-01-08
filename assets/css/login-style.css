@@ -1,0 +1,5 @@
+body .image {
+  		background:url(assets/img/skripsi.jpg) no-repeat transparent !important;
+  		padding-top:100px;
+  		background-size:cover;
+}
