@@ -24,7 +24,8 @@ class Pengajuan_sempro extends CI_Controller
             }
             $name[] = $v['name'];
 
-		$data = array ( 'nim' 				=> $this->session->userdata('nim'),
+		$data = array ( 
+						'nim' 				=> $this->session->userdata('nim'),
 						'file_sempro1' 		=> $fs0,
 						'file_sempro2' 		=> $fs1,
 						'file_sempro3' 		=> $fs2,
