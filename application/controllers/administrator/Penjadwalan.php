@@ -7,6 +7,7 @@ class Penjadwalan extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('jadwal_model');
+		$this->load->model('skripsi_model');
 	}
 
 	public function index()
@@ -29,7 +30,7 @@ class Penjadwalan extends CI_Controller
 	{
 		// $this->load->model('jadwal_model');
 		$data['user']	= $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-		// $data['jadwal_sempro']	=	$this->jadwal_model->get_data('jadwal_sempro');
+		$data['jadwal_sidang']	=	$this->skripsi_model->get_data('jadwal_skripsi');
 		//print_r($data['jadwal_sempro']);die();
 
 		$this->load->view('template_administrator/header');

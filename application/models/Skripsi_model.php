@@ -35,7 +35,11 @@ class Skripsi_model extends CI_Model
 	}
 
 
-
+	public function get_data()
+	{
+		$query = $this->db->get('jadwal_skripsi');
+		return $query->result();
+	}
 
 
 

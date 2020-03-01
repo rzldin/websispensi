@@ -29,7 +29,7 @@
 
 <body style="background-image: url('https://cdn.csu.edu.au/__data/assets/image/0006/2875965/M_Inclusive_Education_Banner_01.jpg'); background-size: cover">
 
-  <div class="container"><br><br><br>
+  <div class="container"><br>
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
@@ -64,6 +64,10 @@
                     <div class="form-group">
                       <input type="password" class="form-control" id="password" placeholder="Masukkan Password" name="password" required>
                        <?php echo form_error('password', '<div class="text-danger small ml-3">','</div>')?>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="telepon" placeholder="No. Telepon" name="telepon" required>
+                       <?php echo form_error('telepon', '<div class="text-danger small ml-3">','</div>')?>
                     </div>
                     <div class="form-group">
                       <select name="jenis_kelamin" class="form-control" >

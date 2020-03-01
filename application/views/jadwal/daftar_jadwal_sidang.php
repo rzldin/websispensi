@@ -29,11 +29,11 @@
                   <th colspan="2">AKSI</th>
                </tr>
               </thead>
-                 <!--  <tbody>
+                 <tbody>
                   	<?php
 		$no=1;
 
-		foreach ($jadwal_sempro as $js) : ?>
+		foreach ($jadwal_sidang as $js) : ?>
 
 			<tr>
 				<td><?php echo $no++ ?></td>
@@ -46,16 +46,16 @@
         <td><?php echo $js->penguji1 ?></td>
         <td><?php echo $js->penguji2 ?></td>
         <td><?php echo $js->kelas ?></td>
-        <td width="20px"><?php echo anchor('administrator/penjadwalan/update/'.$js->kd_jadwal_sempro,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>')?>
+        <td width="20px"><?php echo anchor('administrator/penjadwalan/update/'.$js->kd_jadwal_skripsi,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>')?>
         </td>
         <td width="20px" onclick="return confirm('Apakah anda yakin, ingin menghapus data ini?')">
-        <?php echo anchor('administrator/penjadwalan/hapus/'.$js->kd_jadwal_sempro,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>')?>
+        <?php echo anchor('administrator/penjadwalan/hapus/'.$js->kd_jadwal_skripsi,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>')?>
         </td>
 		       
 		  </tr>
 		<?php endforeach; ?>		
              
-                  </tbody> -->
+                  </tbody>
                 </table>
               </div>
             </div>

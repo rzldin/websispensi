@@ -3,12 +3,6 @@
 
 class Status_proposal extends CI_Controller
 {
-	
-	
-
-
-
-
 
 	public function menolak($id)
 	{
@@ -75,23 +69,5 @@ class Status_proposal extends CI_Controller
 
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

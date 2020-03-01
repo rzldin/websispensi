@@ -30,7 +30,7 @@
             <?php
             $cek=$this->db->where('dosbing1', $dosen['nama_dosen'])->order_by('id_proposal')->get('proposal')->result();
             ?>
-            <a href="<?php echo base_url('administrator/pendaftaran') ?>" style="text-decoration: none;"><p class="nav-link small text-info">PENGAJUAN JUDUL SKRIPSI <span class="badge badge-secondary"><?php echo COUNT($cek); ?></span></p></a>
+            <a href="<?php echo base_url('dosen/pengajuan') ?>" style="text-decoration: none;"><p class="nav-link small text-info">PENGAJUAN JUDUL SKRIPSI <span class="badge badge-secondary"><?php echo COUNT($cek); ?></span></p></a>
             <i class="fas fa-3x fa-file-alt"></i>
           </div>
 

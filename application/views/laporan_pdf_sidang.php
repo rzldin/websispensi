@@ -6,40 +6,39 @@
 	<h3 style="text-align: center;">JADWAL SIDANG SKRIPSI</h3>
 <br>
 <br>
-	<table>
+	<table  style="width: 100%;border: solid 1px ; border-collapse: collapse; ">
 			<tr>
-			  <th>No</th>
-		      <th>NIM</th>
-		      <th>DOSEN PEMBIMBING</th>
-		      <th>TANGGAL</th>
-		      <th>MULAI</th>
-		      <th>AKHIR</th>
-		      <th>JUDUL</th>
-		      <th>PENGUJI SATU</th>
-		      <th>PENGUJI DUA</th>
-		      <th>KELAS</th>
+			  <th style="border: solid 1px;text-align:center;">No</th>
+		      <th style="border: solid 1px;">NIM</th>
+		      <th style="border: solid 1px;">DOSEN PEMBIMBING</th>
+		      <th style="border: solid 1px;">TANGGAL</th>
+		      <th style="border: solid 1px;">MULAI</th>
+		      <th style="border: solid 1px;">AKHIR</th>
+		      <th style="border: solid 1px;">JUDUL</th>
+		      <th style="border: solid 1px;">PENGUJI SATU</th>
+		      <th style="border: solid 1px;">PENGUJI DUA</th>
+		      <th style="border: solid 1px;">KELAS</th>
 			</tr>
 		
-			<!-- <?php
+			<?php
 
 			$no = 1;
-			foreach ($jadwal_sempro as $jdwl ) : ?>
-			
+			foreach ($jadwal_skripsi as $js ) : ?>
 			<tr>
-				<td><?php echo $no++ ?></td>
-				<td><?php echo $jdwl->nim ?></td>
-				<td><?php echo $jdwl->dosbing1 ?></td>
-				<td><?php echo $jdwl->nama_hari ?></td>
-				<td><?php echo $jdwl->waktu_mulai ?></td>
-				<td><?php echo $jdwl->waktu_akhir ?></td>
-				<td><?php echo $jdwl->judul ?></td>
-				<td><?php echo $jdwl->penguji1 ?></td>
-				<td><?php echo $jdwl->penguji2 ?></td>
-				<td><?php echo $jdwl->kelas ?></td>
+				<td style="border: solid 1px;"><?php echo $no++ ?></td>
+				<td style="border: solid 1px;"><?php echo $js->nim ?></td>
+				<td style="border: solid 1px;"><?php echo $js->dosbing1 ?></td>
+				<td style="border: solid 1px;"><?php echo $js->nama_hari ?></td>
+				<td style="border: solid 1px;"><?php echo $js->waktu_mulai ?></td>
+				<td style="border: solid 1px;"><?php echo $js->waktu_akhir ?></td>
+				<td style="border: solid 1px;"><?php echo $js->judul ?></td>
+				<td style="border: solid 1px;"><?php echo $js->penguji1 ?></td>
+				<td style="border: solid 1px;"><?php echo $js->penguji2 ?></td>
+				<td style="border: solid 1px;"><?php echo $js->kelas ?></td>
 			</tr>
 
 
-			<?php endforeach;?> -->
+			<?php endforeach;?>
 	</table>
 
 </body></html>

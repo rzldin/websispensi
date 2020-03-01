@@ -133,9 +133,9 @@ class Auth extends CI_Controller {
 	public function pdf_sidang()
 	{
 		$this->load->library('dompdf_gen');
-		$this->load->model('jadwal_model');
-
-		$data['jadwal_skripsi']	=	$this->jadwal_model->get_data('jadwal_skripsi');
+		$this->load->model('skripsi_model');
+		$data['jadwal_skripsi']	=	$this->skripsi_model->get_data('jadwal_skripsi');
+		// var_dump($data['jadwal_skripsi']);die();
 		$this->load->view('laporan_pdf_sidang',$data);
 
 		$paper_size	= 'A4';
