@@ -8,6 +8,9 @@ class Auth extends CI_Controller {
 
 	public function index()
 	{
+		if (ucwords($this->uri->segment(1)) == 'Administrator') {
+			redirect('welcome','refresh');
+		}
 		$this->load->view('template_administrator/header');
 		$this->load->view('administrator/login');
 		$this->load->view('template_administrator/footer');
@@ -48,13 +51,13 @@ class Auth extends CI_Controller {
 					$this->session->set_userdata($sess_data);
 				}
 				if ($sess_data['level'] == 'admin') {
-					redirect('administrator/dasbor');
+					redirect('home');
 				}else{
 					$this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">Username atau Password Salah!
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
 							  </button>
 							</div>');
-						redirect('administrator/auth');
+						redirect('masukprd');
 				}
 				
 			}else{
@@ -62,7 +65,7 @@ class Auth extends CI_Controller {
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
 							  </button>
 							</div>');
-					redirect('administrator/auth');
+					redirect('masukprd');
 			}
 		}
 	}
@@ -106,7 +109,7 @@ class Auth extends CI_Controller {
 		$this->session->sess_destroy();
 			echo "<script>
 						alert('Anda telah logout!');
-						window.location='".site_url('administrator/auth')."';
+						window.location='".site_url('masukprd')."';
 					  </script>";
 	}
 

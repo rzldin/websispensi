@@ -25,7 +25,7 @@
 			</a>
 			
 			<form class="form-inline">
-				<button class="btn btn-outline-primary" type="submit"><a href="#loginsispensi">login</a></button>
+				<button class="btn btn-outline-primary" type="submit"><a href="#loginsispensi" name="loginsispensi">login</a></button>
 			</form>
 		</div>
 	</nav>
@@ -67,7 +67,7 @@
 
 	    		<div class="col-sm-4">
 	    			<div class="loginakun">
-	    			<a href="<?php echo site_url('login/mahasiswa') ?>" target="_blank">
+	    			<a href="<?php echo site_url('masukmhs') ?>" target="_blank">
 	    			<img src="<?php echo base_url() ?>assets/img/mahasiswa.png" width="30%" height="30%">
 	    			</a>
 	    			<h5>MAHASISWA</h5>
@@ -76,7 +76,7 @@
 
 	    		<div class="col-sm-4">
 	    			<div class="loginakun">
-	    			<a href="<?php echo site_url('login/dosen') ?>" target="_blank">
+	    			<a href="<?php echo site_url('masukdsn') ?>" target="_blank">
 	    			<img src="<?php echo base_url() ?>assets/img/dosen.png" width="30%" height="30%">
 	    			</a>
 	    			<h5>DOSEN</h5>
@@ -85,7 +85,7 @@
 
 	    		<div class="col-sm-4">
 	    			<div class="loginakun">
-	    			<a href="<?php echo site_url('administrator/auth') ?>" target="_blank">
+	    			<a href="<?php echo site_url('masukprd') ?>" target="_blank">
 	    			<img src="<?php echo base_url() ?>assets/img/admin.png" width="30%" height="30%">
 	    			</a>
 	    			<h5>PRODI</h5>
@@ -117,17 +117,33 @@
     </div>
 <!-- End Footer -->
 
-	    <!-- Optional JavaScript -->
-	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	  <script type="text/javascript" src="<?php echo base_url() ?>assets/css/js/jquery-3.4.1.min.js"></script>
+	  <script>
+	  	$(document).ready(function(){
+	  		$('loginsispensi').on('click', function(event){
+	  			if (this.hash !== "") {
+			      event.preventDefault();
+			      var hash = this.hash;
+	  		$('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+	  </script>
 	  <script type="text/javascript" src="<?php echo base_url() ?>assets/css/js/bootstrap.min.js"></script>
 	  <script defer src="<?php echo base_url() ?>assets/fontawesome5/svg-with-js/js/fontawesome-all.min.js"></script>
-	  <script>
+	 <!--  <script>
 	  $('.loginsispensi').click(function(){
 		$("html, body").animate({
-		scrollBot: $(document).height() }, 1000);
+			scrollBot: $(document).height() }, 1000);
 		return false;
 	  });
-	  </script>
+	  </script> -->
+
   </body>
 </html>

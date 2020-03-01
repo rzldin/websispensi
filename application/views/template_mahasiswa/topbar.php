@@ -13,7 +13,7 @@
 						</div>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" style="margin-right: 1.5rem;" aria-labelledby="dropdownMenuLink"><a class="dropdown-item" href="<?php echo base_url('mahasiswa/dasbor/profil_mahasiswa')?>"><em class="fa fa-user-circle mr-1"></em> Lihat Profil</a>
-						     <a class="dropdown-item" href="<?php echo base_url('mahasiswa/dasbor/logout')?>"><em class="fa fa-power-off mr-1"></em> Logout</a></div>
+						     <a class="dropdown-item" href="<?php echo base_url('keluar')?>"><em class="fa fa-power-off mr-1"></em> Logout</a></div>
 					</div>
 					<div class="clear"></div>
 				</header>

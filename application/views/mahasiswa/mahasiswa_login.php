@@ -49,7 +49,7 @@
                     
                     <!-- <?php echo $this->session->flashdata('pesan') ?> -->
                   </div>
-                  <form method="post" action="<?php echo base_url('mahasiswa/login/proses_login')?>" class="user">
+                  <form method="post" action="<?php echo base_url('lagihmasuk')?>" class="user">
                     <div class="form-group">
                       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                       <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>

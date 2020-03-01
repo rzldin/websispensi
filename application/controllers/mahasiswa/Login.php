@@ -21,12 +21,12 @@ class Login extends CI_Controller
 				$this->session->set_userdata($params);
 				echo "<script>
 						alert('Selamat, login berhasil!');
-						window.location='".site_url('mahasiswa/dasbor/home')."';
+						window.location='".site_url('homez')."';
 					  </script>";
 			} else {
 				echo "<script>
 						alert('Login Gagal, NIM / Password tidak sesuai');
-						window.location='".site_url('login/mahasiswa')."';
+						window.location='".site_url('masukmhs')."';
 					  </script>";
 			}
 		}

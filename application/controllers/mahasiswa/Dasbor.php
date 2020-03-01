@@ -51,47 +51,13 @@ class Dasbor extends CI_Controller
 		}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		public function logout()
 		{
 			$this->session->sess_destroy();
 			echo "<script>
-						alert('Anda berhasil keluar!');
-						window.location='".site_url('login/mahasiswa')."';
-					  </script>";
+					alert('Anda berhasil keluar!');
+					window.location='".site_url('masukmhs')."';
+				  </script>";
 		}
 
 

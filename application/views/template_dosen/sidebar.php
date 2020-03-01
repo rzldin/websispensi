@@ -20,7 +20,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('dosen/dasbor/home') ?>">
+        <a class="nav-link" href="<?php echo base_url('homes') ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -66,7 +66,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('administrator/auth/logout') ?>">
+        <a class="nav-link" href="<?php echo base_url('kelu-ar') ?>">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Logout</span></a>
       </li>

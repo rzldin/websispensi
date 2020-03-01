@@ -19,12 +19,12 @@ class Auth extends CI_Controller {
 				$this->session->set_userdata($params);
 				echo "<script>
 						alert('Selamat, login berhasil!');
-						window.location='".site_url('dosen/dasbor/home')."';
+						window.location='".site_url('homes')."';
 					  </script>";
 			} else {
 				echo "<script>
 						alert('Login Gagal, Username / Password tidak sesuai');
-						window.location='".site_url('login/dosen')."';
+						window.location='".site_url('masukdsn')."';
 					  </script>";
 			}
 		}
@@ -37,7 +37,7 @@ class Auth extends CI_Controller {
 		$this->session->sess_destroy();
 			echo "<script>
 						alert('Anda telah logout!');
-						window.location='".site_url('login/dosen')."';
+						window.location='".site_url('masukdsn')."';
 					  </script>";
 	}
 

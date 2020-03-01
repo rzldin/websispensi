@@ -21,6 +21,9 @@ class Dasbor extends CI_Controller
 
 	public function home()
 	{
+		if (ucwords($this->uri->segment(1)) == 'Dosen') {
+			redirect('welcome','refresh');
+		}
 		$data['dosen']	= $this->db->get_where('dosen', ['id_dosen' => $this->session->userdata('nidn')])->row_array();
 		//print_r($data['dosen']);exit();
 		$this->load->view('template_dosen/header');

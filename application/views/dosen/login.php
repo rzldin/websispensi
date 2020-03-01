@@ -48,7 +48,7 @@
                     <?php echo $this->session->flashdata('pesan') ?>
                   </div>
 
-                  <form method="post" action="<?php echo base_url('dosen/auth/proses_login')?>" class="user">
+                  <form method="post" action="<?php echo base_url('lagi-masuk')?>" class="user">
                     <div class="form-group">
                       <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                       <?php echo form_error('username', '<div class="text-danger small ml-3">','</div>')?>
