@@ -28,6 +28,7 @@
                         $no=1;
                         foreach ($proposal as $pro) :
                     ?>
+
                     <tr>
                       <td><?= $no++; ?></td>
                       <td><?= $pro->nim ?></td>

@@ -16,13 +16,13 @@
                       <div class="form-group row">
                         <label class="col-md-3 col-form-label">Nama</label>
                         <div class="col-md-9">
-                          <input type="text" name="nama_lengkap" id="judul" value="<?php echo set_value('nama_lengkap')?>" class="form-control" placeholder="<?php echo $mahasiswa['nama_lengkap']; ?>" readonly>
+                          <input type="text" name="nama_lengkap" id="nama_lengkap" value="<?php echo set_value('nama_lengkap')?>" class="form-control" placeholder="<?php echo $mahasiswa['nama_lengkap']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label class="col-md-3 col-form-label">NIM</label>
                         <div class="col-md-9">
-                          <input type="text" name="nim" id="judul" value="<?php echo set_value('nim')?>" class="form-control" placeholder="<?php echo $mahasiswa['nim']; ?>" readonly>
+                          <input type="text" name="nim" id="nim" value="<?php echo set_value('nim')?>" class="form-control" placeholder="<?php echo $mahasiswa['nim']; ?>" required>
                         </div>
                       </div>
                       <div class="form-group row">

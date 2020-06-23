@@ -37,6 +37,8 @@ class Pengajuan extends CI_Controller
 					);
 		$data['mahasiswa']	= $this->db->get_where('mahasiswa', ['id' => $this->session->userdata('nim')])->row_array();
 
+		//var_dump($data['mahasiswa']);
+
 
 		$this->load->view('template_mahasiswa/wrapper', $data, FALSE);
 	}

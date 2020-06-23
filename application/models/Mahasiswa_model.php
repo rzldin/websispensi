@@ -5,7 +5,6 @@ class Mahasiswa_model extends CI_Model
 {
 
 	public $table 	= 'mahasiswa';
-	public $id 		= 'id';
 	
 	function ambil_data($id) 
 	{
@@ -46,6 +45,11 @@ class Mahasiswa_model extends CI_Model
 		}else{
 			return false;
 		}
+	}
+
+	public function edit_data($where,$table)
+	{
+		return $this->db->get_where($table,$where);
 	}
 
 	public function update_data($where,$data,$table)

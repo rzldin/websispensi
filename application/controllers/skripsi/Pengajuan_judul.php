@@ -30,21 +30,22 @@ class Pengajuan_judul extends CI_Controller
 					  'error_upload'	=> $this->upload->display_errors(),
 					  'isi'				=> 'mahasiswa/skripsi/pengajuan_judul'
 				);	
-		$data['mahasiswa']	= $this->db->get_where('mahasiswa', ['id' => $this->session->userdata('nim')])->row_array();
-
+		//$data['mahasiswa']	= $this->db->get_where('mahasiswa', ['id' => $this->session->userdata('nim')])->row_array();
+		
 		$this->load->view('template_mahasiswa/wrapper', $data, FALSE);
 	}else{
 		$upload_data					= array('uploads'	=>$this->upload->data());
 		$i = $this->input;
 
-		$data = array ( 
-						'nim' 				=> $this->session->userdata('nim'),
+		$data = array( 
+						'nim' 				=> $i->post('nim'),
 						'judul' 			=> $i->post('judul'),
 						'dosbing1' 			=> $i->post('dosbing1'),
 						'topik_skripsi' 	=> $i->post('topik_skripsi'),
 						'file_skripsi'		=> $upload_data['uploads']['file_name'],
 						'status'			=> 0
 					  );
+
 		$this->proposal_model->tambah($data, 'proposal');
 		$this->session->set_flashdata('pesan', 'Berhasil melakukan Pendaftaran!');
 		redirect(base_url('skripsi/pengajuan_judul/daftar'),'refresh');
@@ -56,6 +57,7 @@ class Pengajuan_judul extends CI_Controller
 					  'isi'				=> 'mahasiswa/skripsi/pengajuan_judul');
 		$data['mahasiswa']	= $this->db->get_where('mahasiswa', ['id' => $this->session->userdata('nim')])->row_array();
 
+		// var_dump($data['mahasiswa']);
 		$this->load->view('template_mahasiswa/wrapper', $data, FALSE);
 	}
 

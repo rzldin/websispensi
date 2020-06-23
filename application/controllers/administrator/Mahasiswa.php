@@ -141,8 +141,9 @@ class Mahasiswa extends CI_Controller {
 
 	public function update($id)
 		{
+			$this->load->model('mahasiswa_model');
 			$where = array('id' => $id );
-			$data['mahasiswa'] = $this->db->query("select * from mahasiswa mhs where mhs.id='$id'")->result();
+			$data['mahasiswa'] = $this->mahasiswa_model->edit_data($where,'mahasiswa')->result();
 			$data['user']	= $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 			$data['detail'] = $this->mahasiswa_model->ambil_id_mahasiswa($id);
 			

@@ -28,6 +28,7 @@
           $no=1;
               foreach ($sempro as $s) :
           ?>
+          <?php var_dump($s); ?>
                 <tr>
                    <td><?= $no++; ?></td>
                     <td><?= $s->nim ?></td>

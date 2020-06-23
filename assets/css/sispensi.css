@@ -2,6 +2,14 @@
     text-decoration: none;
 }
 
+.index-button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .jumbotron {
     border-radius: 0;
     padding: 3rem 0 2rem;
