@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2019 at 07:16 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Jun 23, 2020 at 03:35 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -61,7 +62,7 @@ CREATE TABLE `dosen` (
   `email` varchar(100) NOT NULL,
   `telp` varchar(50) NOT NULL,
   `photo` varchar(50) NOT NULL,
-  `tanggal_bergabung` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `tanggal_bergabung` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -146,7 +147,7 @@ CREATE TABLE `mahasiswa` (
   `password` varchar(255) NOT NULL,
   `email` varchar(120) NOT NULL,
   `telepon` varchar(20) NOT NULL,
-  `tanggal_bergabung` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `tanggal_bergabung` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `blokir` enum('N','Y') NOT NULL,
   `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
   `photo` varchar(255) NOT NULL
@@ -161,7 +162,9 @@ INSERT INTO `mahasiswa` (`id`, `nim`, `nama_lengkap`, `password`, `email`, `tele
 (13, '1501071090', 'Muhammad Abduh Robbani', '202cb962ac59075b964b07152d234b70', 'moch.abdoeh@rocketmail.com', '0813313131313', '2019-07-21 14:57:24', 'N', 'Laki-laki', ''),
 (14, '1501071091', 'Pajar Aji Maulana', '7363a0d0604902af7b70b271a0b96480', 'pajaraji@gmail.com', '0813313131313', '2019-07-21 15:19:15', 'N', 'Laki-laki', 'IMG_1746.JPG'),
 (15, '1501071099', 'rijal', '202cb962ac59075b964b07152d234b70', 'aldinnerozz@gmail.com', '', '2019-07-16 17:28:31', 'N', 'Laki-laki', ''),
-(16, '1501071032', 'zzz', '202cb962ac59075b964b07152d234b70', 'sispensiutsinfo@gmail.com', '0813313131313', '2019-07-17 16:33:18', 'N', 'Laki-laki', 'Default.jpg');
+(16, '1501071032', 'zzz', '202cb962ac59075b964b07152d234b70', 'sispensiutsinfo@gmail.com', '0813313131313', '2019-07-17 16:33:18', 'N', 'Laki-laki', 'Default.jpg'),
+(17, '1501071023', 'Rizal Aldin', '25d55ad283aa400af464c76d713c07ad', 'rizalaldin67@gmail.com', '12345678', '2020-06-23 07:59:03', 'N', 'Laki-laki', 'DSC_0374.JPG'),
+(18, '150107101', 'Rald', 'fcea920f7412b5da7be0cf42b8c93759', 'rizalaldin67@gmail.com', '12121', '2020-06-23 07:42:18', 'N', 'Laki-laki', 'DSC_0374.JPG');
 
 -- --------------------------------------------------------
 
@@ -171,7 +174,7 @@ INSERT INTO `mahasiswa` (`id`, `nim`, `nama_lengkap`, `password`, `email`, `tele
 
 CREATE TABLE `proposal` (
   `id_proposal` int(20) NOT NULL,
-  `nim` varchar(11) NOT NULL,
+  `nim` varchar(55) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `dosbing1` varchar(20) NOT NULL,
   `topik_skripsi` varchar(100) NOT NULL,
@@ -184,8 +187,7 @@ CREATE TABLE `proposal` (
 --
 
 INSERT INTO `proposal` (`id_proposal`, `nim`, `judul`, `dosbing1`, `topik_skripsi`, `file_skripsi`, `status`) VALUES
-(21, '12', 'Aplikasi pendaftaran Skripsi', 'Shinta Esabella, M.T', 'Rekayasa Perangkat Lunak', '4-compositeresin.pdf', 1),
-(22, '12', 'Aplikasi Karyawan Berbasis Web', 'Yudi Mulyanto, M.Kom', 'Rekayasa Perangkat Lunak', '1NURUL-HIDAYAHTUL_FRONTEND-BACKEND.pdf', 1);
+(32, '1501071023', 'Judul', 'Tommy Dwi Cahyono, S', 'Rekayasa Perangkat Lunak', 'Hadiah_Untuk_Programmer_-_Hilman_Ramadhan10.pdf', 1);
 
 -- --------------------------------------------------------
 
@@ -203,16 +205,6 @@ CREATE TABLE `sempro` (
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `sempro`
---
-
-INSERT INTO `sempro` (`id_sempro`, `nim`, `file_sempro1`, `file_sempro2`, `file_sempro3`, `file_sempro4`, `status`) VALUES
-(848, 12, '118-142-1-SM.pdf', '109-1-73-1-10-20170402 (1).pdf', '2015nho.pdf', '21000496.pdf', 2),
-(849, 12, '109-1-73-1-10-20170402 (1).pdf', '118-142-1-SM.pdf', '21000496.pdf', '20190510103302 Surat Kuasa.pdf', 2),
-(850, 12, 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 2),
-(851, 12, 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -228,22 +220,6 @@ CREATE TABLE `sidang` (
   `file_sidang4` varchar(255) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `sidang`
---
-
-INSERT INTO `sidang` (`id_sidang`, `nim`, `file_sidang1`, `file_sidang2`, `file_sidang3`, `file_sidang4`, `status`) VALUES
-(1, 12, 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 'CETAK KARTU UJIAN AKHIR SEMESTER.pdf', 0),
-(2, 12, '1NURUL-HIDAYAHTUL_FRONTEND-BACKEND.pdf', '31-65-2-PB.pdf', '1187-2593-1-SM.pdf', '926-2767-1-PB.pdf', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_pengajuan_judul`
---
--- in use(#1932 - Table 'websispensi.tbl_pengajuan_judul' doesn't exist in engine)
--- Error reading data: (#1932 - Table 'websispensi.tbl_pengajuan_judul' doesn't exist in engine)
 
 -- --------------------------------------------------------
 
@@ -400,61 +376,74 @@ ALTER TABLE `user`
 --
 ALTER TABLE `daftar_ruangan`
   MODIFY `id_ruangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
   MODIFY `id_dosen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `dosen_pembimbing`
 --
 ALTER TABLE `dosen_pembimbing`
   MODIFY `id_dosenpmb` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `jadwal_sempro`
 --
 ALTER TABLE `jadwal_sempro`
-  MODIFY `kd_jadwal_sempro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `kd_jadwal_sempro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `jadwal_skripsi`
 --
 ALTER TABLE `jadwal_skripsi`
   MODIFY `kd_jadwal_skripsi` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT for table `proposal`
 --
 ALTER TABLE `proposal`
-  MODIFY `id_proposal` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_proposal` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `sempro`
 --
 ALTER TABLE `sempro`
   MODIFY `id_sempro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=852;
+
 --
 -- AUTO_INCREMENT for table `sidang`
 --
 ALTER TABLE `sidang`
   MODIFY `id_sidang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `tbl_role`
 --
 ALTER TABLE `tbl_role`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `topik_skripsi`
 --
 ALTER TABLE `topik_skripsi`
   MODIFY `id_topik_skripsi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
